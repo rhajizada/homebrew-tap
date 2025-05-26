@@ -2,7 +2,6 @@ class Copycat < Formula
   desc "CLI to copy project source code as Markdown to clipboard for LLMs"
   homepage "https://github.com/rhajizada/copycat"
   version "0.2.0"
-  
   license "MIT"
 
   if OS.mac?
