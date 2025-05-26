@@ -28,6 +28,10 @@ jobs:
         with:
           token: ${{ github.token }}
 
+      - name: Update installed formulae
+        run: brew upgrade
+        shell: bash
+
       - name: Test formulaes
         run: |
           for file in "Formula/*.rb; do
