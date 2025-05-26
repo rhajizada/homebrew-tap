@@ -1,20 +1,20 @@
 class Copycat < Formula
-  desc "CLI tool to copy your project source code as Markdown to clipboard for context-aware responses from LLMs"
+  desc "CLI to copy project source code as Markdown to clipboard for LLMs"
   homepage "https://github.com/rhajizada/copycat"
+  version "0.2.0"
   license "MIT"
-  version = "0.2.0"
 
-   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rhajizada/copycat/releases/download/v0.2.0/copycat-x86_64-apple-darwin.tar.gz"
-      sha256 "5f41303343bbd9bd54d23df2118df86507605526d30034d276c7e135ddf88e46"
-    else
-      url "https://github.com/rhajizada/copycat/releases/download/v0.2.0/copycat-aarch64-apple-darwin.tar.gz"
-      sha256 "9e5bdce56fc6ef76595241529dba5dbd7de184d7724133dba1dc53c9c73f74d4"
-    end
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/rhajizada/copycat/releases/download/v0.2.0/copycat-x86_64-apple-darwin.tar.gz"
+    sha256 "5f41303343bbd9bd54d23df2118df86507605526d30034d276c7e135ddf88e46"
   end
 
-  on_linux do
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/rhajizada/copycat/releases/download/v0.2.0/copycat-aarch64-apple-darwin.tar.gz"
+      sha256 "9e5bdce56fc6ef76595241529dba5dbd7de184d7724133dba1dc53c9c73f74d4"
+  end
+
+  if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/rhajizada/copycat/releases/download/v0.2.0/copycat-x86_64-unknown-linux-gnu.tar.gz"
     sha256 "75a21808868c985534b3bd1f5af3495e15a15173c7fc966a8d3b3b5076985025"
   end
@@ -24,7 +24,6 @@ class Copycat < Formula
   end
 
   test do
-    version_output = shell_output("#{bin}/copycat -Version")
-    assert_match "copycat #{version}\n", version_output
+    assert_match "copycat #{version}", shell_output("#{bin}/copycat --version")
   end
 end
