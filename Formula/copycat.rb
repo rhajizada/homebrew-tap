@@ -28,4 +28,3 @@ class Copycat < Formula
     assert_match "copycat #{version}", shell_output("#{bin}/copycat --version")
   end
 end
-

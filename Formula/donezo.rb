@@ -28,4 +28,3 @@ class Donezo < Formula
     assert_match "donezo #{version}", shell_output("#{bin}/donezo --version")
   end
 end
-
