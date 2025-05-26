@@ -2,7 +2,7 @@ class Copycat < Formula
   desc "CLI to copy project source code as Markdown to clipboard for LLMs"
   homepage "https://github.com/rhajizada/copycat"
   license "MIT"
-  version = "0.2.0"
+  version "0.2.0"
 
   if OS.mac?
     if Hardware::CPU.intel?

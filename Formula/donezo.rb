@@ -2,7 +2,7 @@ class Donezo < Formula
   desc "Simple TUI to-do app in written Go using Bubble Tea and SQLite"
   homepage "https://github.com/rhajizada/donezo"
   license "MIT"
-  version = "0.1.0"
+  version "0.1.0"
 
   if OS.mac?
     if Hardware::CPU.intel?
