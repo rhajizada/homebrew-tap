@@ -3,7 +3,6 @@ class Donezo < Formula
   homepage "https://github.com/rhajizada/donezo"
   version "0.1.0"
   license "MIT"
-  version_scheme 1
 
   if OS.mac?
     if Hardware::CPU.intel?
