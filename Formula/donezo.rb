@@ -2,6 +2,7 @@ class Donezo < Formula
   desc "Simple TUI to-do app written in Go using Bubble Tea and SQLite"
   homepage "https://github.com/rhajizada/donezo"
   license "MIT"
+  head "https://github.com/rhajizada/donezo.git", branch: "main"
 
   stable do
     version "0.1.0"
