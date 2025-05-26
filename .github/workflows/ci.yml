@@ -12,11 +12,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
-    permissions:
-      actions: read
-      checks: read
-      contents: read
-      pull-requests: read
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -25,16 +21,10 @@ jobs:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
-        with:
-          token: ${{ github.token }}
-
-      - name: Update installed formulae
-        run: brew upgrade
-        shell: bash
 
       - name: Test formulaes
         run: |
-          for file in "Formula/*.rb; do
+          for file in Formula/*.rb; do
             formula=$(basename "${file}" .rb)
             brew install --build-from-source "${file}"
             brew test "${formula}"
