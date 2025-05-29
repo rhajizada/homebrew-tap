@@ -12,8 +12,8 @@ Package manager for macOS (or Linux), see more at <https://brew.sh>
 
 | Formula     | Description                                                                                               | Repository                             |
 | :---------- | :-------------------------------------------------------------------------------------------------------- | :------------------------------------- |
-| **donezo**  | Simple TUI to-do app written in Go using Bubble Tea and SQLite.                                           | <https://github.com/rhajizada/donezo>  |
 | **copycat** | CLI tool to copy your project source code as Markdown to clipboard for context-aware responses from LLMs. | <https://github.com/rhajizada/copycat> |
+| **donezo**  | Simple TUI to-do app written in Go using Bubble Tea and SQLite.                                           | <https://github.com/rhajizada/donezo>  |
 
 ## How do I install these formulae?
 
