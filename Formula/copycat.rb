@@ -16,7 +16,7 @@ class Copycat < Formula
 
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/rhajizada/copycat/releases/download/v#{version}/copycat-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "75a21808868c985534b3bd1f5af3495e15a15173c7fc966a8d3b3b5076985025"
+    sha256 "dcef33046c8f455d13f0ff2a161fa2eb2e4c5547bd8ccc43931425546857fc9c"
   end
 
   def install
