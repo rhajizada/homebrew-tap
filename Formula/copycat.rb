@@ -1,25 +1,20 @@
 class Copycat < Formula
   desc "CLI to copy project source code as Markdown to clipboard for LLMs"
   homepage "https://github.com/rhajizada/copycat"
-  version "0.2.2"
+  url "https://github.com/rhajizada/copycat/archive/refs/tags/v0.2.2.tar.gz"
+  sha256 "c1d2f92ba5828fb7f82767ae688d4f04aa9f3237a7da2acbd82069e069d9bb2b"
   license "MIT"
+  head "https://github.com/rhajizada/copycat.git", branch: "main"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/rhajizada/copycat/releases/download/v#{version}/copycat-x86_64-apple-darwin.tar.gz"
-    sha256 "91eb679d0ab2b888109d277812ca6a63bb79c2cdc0467b35afdf211626fa95ca"
+  livecheck do
+    url :stable
+    strategy :github_latest
   end
 
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/rhajizada/copycat/releases/download/v#{version}/copycat-aarch64-apple-darwin.tar.gz"
-    sha256 "6af79e8cd7d0fa4fc63c706cafa6a3d4bee0b1537eb0898c43599e9f884d562e"
-  end
-
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/rhajizada/copycat/releases/download/v#{version}/copycat-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "dcef33046c8f455d13f0ff2a161fa2eb2e4c5547bd8ccc43931425546857fc9c"
-  end
+  depends_on "rust" => :build
 
   def install
+    system "cargo", "build", "--release", *std_cargo_args
     bin.install "copycat"
   end
 
