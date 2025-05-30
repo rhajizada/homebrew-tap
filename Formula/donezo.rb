@@ -7,8 +7,17 @@ class Donezo < Formula
   head "https://github.com/rhajizada/donezo.git", branch: "main"
 
   livecheck do
-    url :stable
-    strategy :github_latest
+    url     :stable
+    regex(/^v(\d+\.\d+\.\d+)$/)
+
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"]
+
+        match = release["tag_name"]&.match(regex)
+        match[1] if match
+      end
+    end
   end
 
   depends_on "go" => :build
