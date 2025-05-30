@@ -1,10 +1,10 @@
-class Donezo < Formula
-  desc "Simple TUI to-do app written in Go using Bubble Tea and SQLite"
-  homepage "https://github.com/rhajizada/donezo"
-  url "https://github.com/rhajizada/donezo/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "4c52bb43338ef98d074437c60dd91e5d633bb627d6bf4a044dc1689dfbcc5430"
+class Copycat < Formula
+  desc "CLI to copy project source code as Markdown to clipboard for LLMs"
+  homepage "https://github.com/rhajizada/copycat"
+  url "https://github.com/rhajizada/copycat/archive/refs/tags/v0.2.2.tar.gz"
+  sha256 "c1d2f92ba5828fb7f82767ae688d4f04aa9f3237a7da2acbd82069e069d9bb2b"
   license "MIT"
-  head "https://github.com/rhajizada/donezo.git", branch: "main"
+  head "https://github.com/rhajizada/copycat.git", branch: "main"
 
   livecheck do
     url     :stable
@@ -20,14 +20,13 @@ class Donezo < Formula
     end
   end
 
-  depends_on "go" => :build
+  depends_on "rust" => :build
 
   def install
-    ldflags = "-s -w -X main.Version=#{version}"
-    system "go", "build", *std_go_args(ldflags:)
+    system "cargo", "install", *std_cargo_args
   end
 
   test do
-    assert_match "donezo #{version}", shell_output("#{bin}/donezo --version")
+    assert_match "copycat #{version}", shell_output("#{bin}/copycat --version")
   end
 end
