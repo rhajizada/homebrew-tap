@@ -14,8 +14,7 @@ class Copycat < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "build", "--release", *std_cargo_args
-    bin.install "copycat"
+    system "cargo", "install", *std_cargo_args
   end
 
   test do
