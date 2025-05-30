@@ -8,7 +8,7 @@ class Donezo < Formula
 
   livecheck do
     url     :stable
-    regex(/^v(\d+\.\d+\.\d+)$/)
+    regex(/^v(\d+\.\d+\.\d+)$/i)
 
     strategy :github_releases do |json, regex|
       json.map do |release|
