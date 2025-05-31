@@ -1,6 +1,6 @@
 # homebrew-tap
 
-![ci](https://github.com/rhajizada/homebrew-tap/actions/workflows/ci.yml/badge.svg)
+![tests](https://github.com/rhajizada/homebrew-tap/actions/workflows/ci.yml/badge.svg)
 
 Homebrew Tap of my personal projects and tools
 
