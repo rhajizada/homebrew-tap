@@ -23,8 +23,8 @@ class Donezo < Formula
   depends_on "go" => :build
 
   def install
-    system "make", "build"
-    bin.install "bin/donezo"
+    ldflags = "-s -w -X main.Version=#{version}"
+    system "go", "build", *std_go_args(ldflags:)
   end
 
   test do
