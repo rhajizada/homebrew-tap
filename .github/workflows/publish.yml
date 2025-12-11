@@ -28,7 +28,9 @@ jobs:
         uses: Homebrew/actions/git-user-config@master
 
       - name: Determine tap path
-        run: echo "TAP_DIR=$(brew --repo \"$GITHUB_REPOSITORY\")" >> "$GITHUB_ENV"
+        run: |
+          TAP_DIR="$(brew --repo "$GITHUB_REPOSITORY")"
+          echo "TAP_DIR=$TAP_DIR" >> "$GITHUB_ENV"
 
       - name: Check out PR branch
         run: |
