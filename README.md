@@ -13,6 +13,7 @@ Package manager for macOS (or Linux), see more at <https://brew.sh>
 | Formula     | Description                                                                                               | Repository                             |
 | :---------- | :-------------------------------------------------------------------------------------------------------- | :------------------------------------- |
 | **copycat** | CLI tool to copy your project source code as Markdown to clipboard for context-aware responses from LLMs. | <https://github.com/rhajizada/copycat> |
+| **cradle**  | CLI to build and launch Docker images with a consistent, pre-configured setup.                            | <https://github.com/rhajizada/cradle> |
 | **donezo**  | Simple TUI to-do app written in Go using Bubble Tea and SQLite.                                           | <https://github.com/rhajizada/donezo>  |
 
 ## How do I install these formulae?
