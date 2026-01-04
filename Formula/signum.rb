@@ -1,5 +1,5 @@
 class Signum < Formula
-  desc "SVG badge generator written in Go."
+  desc "SVG badge generator written in Go"
   homepage "https://github.com/rhajizada/signum"
   url "https://github.com/rhajizada/signum/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "33161d6d4367a4f6ae8c96ffca2e136b532b9b60f1bf9565212c83c281852a36"
