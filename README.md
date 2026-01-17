@@ -1,6 +1,7 @@
 # homebrew-tap
 
-![tests](https://github.com/rhajizada/homebrew-tap/actions/workflows/ci.yml/badge.svg)
+![publish](https://github.com/rhajizada/homebrew-tap/actions/workflows/publish.yml/badge.svg)
+![tests](https://github.com/rhajizada/homebrew-tap/actions/workflows/tests.yml/badge.svg)
 
 Homebrew Tap of my personal projects and tools
 
