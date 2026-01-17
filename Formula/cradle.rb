@@ -1,8 +1,8 @@
 class Cradle < Formula
   desc "CLI to build and launch Docker images with a consistent, pre-configured setup"
   homepage "https://github.com/rhajizada/cradle"
-  url "https://github.com/rhajizada/cradle/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "5d6ffda4b2b4f591a0a4369ea0e73ab55261292f9f36bf0f537d3d297a79e671"
+  url "https://github.com/rhajizada/cradle/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "a073378f312030449ce579a4c53f2eb06847d3fcaf6c86994b8c2c21181dd9e4"
   license "MIT"
   head "https://github.com/rhajizada/cradle.git", branch: "main"
 
