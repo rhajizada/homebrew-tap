@@ -1,8 +1,8 @@
 class Cradle < Formula
   desc "CLI to build and launch Docker images with a consistent, pre-configured setup"
   homepage "https://github.com/rhajizada/cradle"
-  url "https://github.com/rhajizada/cradle/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "9fd5fdfe3893861557b740bb36da394c4dd15fb9502c505324b850e4f4daacee"
+  url "https://github.com/rhajizada/cradle/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "d55d6184553542e01f31d67a62fa40846fe5a9c67b4b0d82445605a387ea7911"
   license "MIT"
   head "https://github.com/rhajizada/cradle.git", branch: "main"
 
@@ -21,7 +21,7 @@ class Cradle < Formula
   end
 
   bottle do
-    root_url "https://github.com/rhajizada/homebrew-tap/releases/download/cradle-0.2.0"
+    root_url "https://github.com/rhajizada/homebrew-tap/releases/download/cradle-0.2.1"
     sha256 cellar: :any_skip_relocation, arm64_tahoe:  "d7953614d839f1928c1e756421b06a8189f6412d656d1445bb1829dda5770a32"
     sha256 cellar: :any_skip_relocation, arm64_sonoma: "08ad1c39d60b1d6471b24015392e7be50dd94aea7774ebc327731a56cab509b2"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "9ebd357dda48b9d96185c986e06e1197c5daf7bf09c83725ea3394ee7ec76904"
