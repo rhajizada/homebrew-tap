@@ -22,9 +22,9 @@ class Cradle < Formula
 
   bottle do
     root_url "https://github.com/rhajizada/homebrew-tap/releases/download/cradle-0.2.1"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "d7953614d839f1928c1e756421b06a8189f6412d656d1445bb1829dda5770a32"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "08ad1c39d60b1d6471b24015392e7be50dd94aea7774ebc327731a56cab509b2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9ebd357dda48b9d96185c986e06e1197c5daf7bf09c83725ea3394ee7ec76904"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "9de5a2365659429da74fb8495fa3ca4f540484753b5875dd248d53ba62c80e3e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "bf086c2c9b76c7146ad6d79546a5ac1f1f744a6a4767fb2fd461f78d7f2a010e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "45ef810962129ac59a8bad132035aaf694944eba6f4ce10f51c9fb1447ef615c"
   end
 
   depends_on "go" => :build
