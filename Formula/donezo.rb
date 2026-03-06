@@ -21,10 +21,10 @@ class Donezo < Formula
   end
 
   bottle do
-    root_url "https://github.com/rhajizada/homebrew-tap/releases/download/donezo-0.1.1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "7f22627fc873d62c5f62f11b2e68d5517fc0748a20debcdd9d8347b5437b1996"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "0f860c580f0af1cc0e6d02d717c28856f52cbf910ab6ed741d93e3fa8fd4ff3d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "8016c17267b941ae8a60613927abf52a27d81666424af5f3ddb78da7f3a8ef4c"
+    root_url "https://github.com/rhajizada/homebrew-tap/releases/download/donezo-0.2.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "fa5a77d900a6be9fc373cb44a45f04e2960492b1f046b56bf586e60ef0f7a423"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "8e3694241b943f877d2aea0974f9402454bdbb18ef1193dc90b7403914fadf94"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "d17a00dda01ab1fae3a67d694806575d6ae9fb26f9a46b8ab335c2346ea62ee6"
   end
 
   depends_on "go" => :build
