@@ -1,8 +1,8 @@
 class Donezo < Formula
   desc "Simple TUI to-do app written in Go using Bubble Tea and SQLite"
   homepage "https://github.com/rhajizada/donezo"
-  url "https://github.com/rhajizada/donezo/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "37fda0fa19cbfa9df7535bf371d620fc66992fc4f42a38e7b5585674ce655f02"
+  url "https://github.com/rhajizada/donezo/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "6d18315b4b332c2a3064433497b9885db59a90341aa79c5d3aae978cec4a6ead"
   license "MIT"
   head "https://github.com/rhajizada/donezo.git", branch: "main"
 
